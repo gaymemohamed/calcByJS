@@ -14,7 +14,6 @@ document.getElementById("main").appendChild(mainDiv);
 //create header
 
 const headerDiv = document.createElement('div');
-
 headerDiv.id = 'header-div';
 headerDiv.appendChild(document.createTextNode('JavaScript Calculator'));
 headerDiv.style.color = '#fff';
@@ -27,8 +26,9 @@ document.getElementById('main-div').appendChild(headerDiv);
 
 // create input field 
 const input = document.createElement('input');
-input.className = 'input-field';
+input.id = 'input-field';
 input.setAttribute('type','text');
+input.setAttribute('value','');
 input.style.padding = '12px';
 input.style.width = '190px';
 input.style.marginTop = '8px';
@@ -38,6 +38,7 @@ document.getElementById('main-div').appendChild(input);
 
 //equal Button
 const equalBtn = document.createElement('button');
+equalBtn.id = 'equalBtn';
 equalBtn.appendChild(document.createTextNode('='));
 equalBtn.style.padding = '10px';
 equalBtn.style.width = '70px';
@@ -50,6 +51,8 @@ document.getElementById('main-div').appendChild(equalBtn);
 
 //one Button
 const oneBtn = document.createElement('button');
+oneBtn.className = 'num';
+oneBtn.setAttribute('value', '1');
 oneBtn.appendChild(document.createTextNode('1'));
 oneBtn.style.padding = '10px';
 oneBtn.style.width = '72px';
@@ -62,6 +65,8 @@ document.getElementById('main-div').appendChild(oneBtn);
 
 //two Button
 const twoBtn = document.createElement('button');
+twoBtn.className = 'num';
+twoBtn.setAttribute('value', '2');
 twoBtn.appendChild(document.createTextNode('2'));
 twoBtn.style.padding = '10px';
 twoBtn.style.width = '70px';
@@ -75,6 +80,8 @@ document.getElementById('main-div').appendChild(twoBtn);
 
 //three Button
 const threeBtn = document.createElement('button');
+threeBtn.className = 'num';
+threeBtn.setAttribute('value', '3');
 threeBtn.appendChild(document.createTextNode('3'));
 threeBtn.style.padding = '10px';
 threeBtn.style.width = '70px';
@@ -88,6 +95,7 @@ document.getElementById('main-div').appendChild(threeBtn);
 
 //sum Button
 const sumBtn = document.createElement('button');
+sumBtn.class = 'ops';
 sumBtn.appendChild(document.createTextNode('+'));
 sumBtn.style.padding = '10px';
 sumBtn.style.width = '70px';
@@ -101,6 +109,8 @@ document.getElementById('main-div').appendChild(sumBtn);
 
 //four Button
 const fourBtn = document.createElement('button');
+fourBtn.className = 'num';
+fourBtn.setAttribute('value', '4');
 fourBtn.appendChild(document.createTextNode('4'));
 fourBtn.style.padding = '10px';
 fourBtn.style.width = '70px';
@@ -113,6 +123,8 @@ document.getElementById('main-div').appendChild(fourBtn);
 
 //five Button
 const fiveBtn = document.createElement('button');
+fiveBtn.className = 'num';
+fiveBtn.setAttribute('value', '5');
 fiveBtn.appendChild(document.createTextNode('5'));
 fiveBtn.style.padding = '10px';
 fiveBtn.style.width = '70px';
@@ -126,6 +138,8 @@ document.getElementById('main-div').appendChild(fiveBtn);
 
 //six Button
 const sixBtn = document.createElement('button');
+sixBtn.className = 'num';
+sixBtn.setAttribute('value', '6');
 sixBtn.appendChild(document.createTextNode('6'));
 sixBtn.style.padding = '10px';
 sixBtn.style.width = '70px';
@@ -139,6 +153,7 @@ document.getElementById('main-div').appendChild(sixBtn);
 
 //sub Button
 const subBtn = document.createElement('button');
+subBtn.className = 'ops';
 subBtn.appendChild(document.createTextNode('-'));
 subBtn.style.padding = '10px';
 subBtn.style.width = '70px';
@@ -152,6 +167,8 @@ document.getElementById('main-div').appendChild(subBtn);
 
 //seven Button
 const sevenBtn = document.createElement('button');
+sevenBtn.className = 'num';
+sevenBtn.setAttribute('value', '7');
 sevenBtn.appendChild(document.createTextNode('7'));
 sevenBtn.style.padding = '10px';
 sevenBtn.style.width = '70px';
@@ -164,6 +181,8 @@ document.getElementById('main-div').appendChild(sevenBtn);
 
 //eight Button
 const eightBtn = document.createElement('button');
+eightBtn.className = 'num';
+eightBtn.setAttribute('value', '8');
 eightBtn.appendChild(document.createTextNode('8'));
 eightBtn.style.padding = '10px';
 eightBtn.style.width = '70px';
@@ -178,6 +197,8 @@ document.getElementById('main-div').appendChild(eightBtn);
 
 //nine Button
 const nineBtn = document.createElement('button');
+nineBtn.className = 'num';
+nineBtn.setAttribute('value', '9');
 nineBtn.appendChild(document.createTextNode('9'));
 nineBtn.style.padding = '10px';
 nineBtn.style.width = '70px';
@@ -192,6 +213,7 @@ document.getElementById('main-div').appendChild(nineBtn);
 
 //multi Button
 const multiBtn = document.createElement('button');
+multiBtn.className = 'ops';
 multiBtn.appendChild(document.createTextNode('*'));
 multiBtn.style.padding = '10px';
 multiBtn.style.width = '70px';
@@ -207,6 +229,7 @@ document.getElementById('main-div').appendChild(multiBtn);
 
 //reset Button
 const resetBtn = document.createElement('button');
+resetBtn.setAttribute('type' , 'reset');
 resetBtn.appendChild(document.createTextNode('C'));
 resetBtn.style.padding = '10px';
 resetBtn.style.width = '70px';
@@ -220,6 +243,8 @@ document.getElementById('main-div').appendChild(resetBtn);
 
 //zero Button
 const zeroBtn = document.createElement('button');
+zeroBtn.className = 'num';
+zeroBtn.setAttribute('value', '0');
 zeroBtn.appendChild(document.createTextNode('0'));
 zeroBtn.style.padding = '10px';
 zeroBtn.style.width = '70px';
@@ -234,6 +259,7 @@ document.getElementById('main-div').appendChild(zeroBtn);
 
 //dot Button
 const dotBtn = document.createElement('button');
+dotBtn.setAttribute('value', '.');
 dotBtn.appendChild(document.createTextNode('.'));
 dotBtn.style.padding = '10px';
 dotBtn.style.width = '70px';
@@ -246,8 +272,9 @@ dotBtn.style.cursor = 'pointer';
 document.getElementById('main-div').appendChild(dotBtn);
 
 
-//multi Button
+//divide Button
 const divideBtn = document.createElement('button');
+divideBtn.className = 'ops';
 divideBtn.appendChild(document.createTextNode('/'));
 divideBtn.style.padding = '10px';
 divideBtn.style.width = '70px';
@@ -272,6 +299,7 @@ document.getElementById('main').appendChild(formula);
 
 //create input for formula 
 const formulaInput = document.createElement('input');
+formulaInput.id = 'formulaInput';
 formulaInput.setAttribute('type','text');
 formulaInput.style.padding = '12px';
 formulaInput.style.width = '190px';
@@ -279,3 +307,36 @@ formulaInput.style.border = '1px solid #000';
 formulaInput.style.borderRadius = '5px';
 formulaInput.style.marginLeft = '8px';
 document.getElementById('formula').appendChild(formulaInput);
+
+
+//event Listener to add numbers to input Field
+mainDiv.addEventListener('click',returnValue);
+//save first value
+mainDiv.addEventListener('click',getFirstValue);
+//event listener to reset
+resetBtn.addEventListener('click',reset);
+//event listener to sum button
+sumBtn.addEventListener('click',sumition);
+//event listener to show result
+equalBtn.addEventListener('click', showResult);
+
+function returnValue(e){
+    if(e.target.value !== ''){
+        input.value = e.target.value;
+        return input.value;
+    }
+}
+
+
+function reset(e){
+        input.value = '';
+        return input.value;
+}
+
+function sumition(e){
+    let sum=0;
+    let firstNum = input.value;
+    input.value;
+    sum = sum + firstNum;
+    return sum;
+}
